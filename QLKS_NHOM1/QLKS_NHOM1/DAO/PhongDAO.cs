@@ -15,7 +15,7 @@ namespace QLKS_NHOM1.DAO
 
         internal static PhongDAO Instance
         {
-            get { if (instance == nugll) instance = new PhongDAO(); return instance; }
+            get { if (instance == null) instance = new PhongDAO(); return instance; }
             private set { instance = value; }
         }
         public List<Phong> GetAll()

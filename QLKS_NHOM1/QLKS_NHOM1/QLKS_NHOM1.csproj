@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DataAccessLayer\DataProvider.cs" />
     <Compile Include="GUI\fCustomer.cs">
