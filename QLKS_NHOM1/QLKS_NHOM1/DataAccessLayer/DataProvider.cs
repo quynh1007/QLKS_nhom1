@@ -12,7 +12,7 @@ namespace QLKS_NHOM1.DataAccessLayer
     {
         private static DataProvider instance; // Ctrl + R + E
 
-          private string connectionString = "Data Source=QUYNH\\SQLEXPRESS;Initial Catalog=QL_KS;Integrated Security=True";
+          private string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=QL_KS;Integrated Security=True";
         //private string connectionString = "Server=DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLTV;User ID=nhom1;pwd=nhom1";
       
         public static DataProvider Instance

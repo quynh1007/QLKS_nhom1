@@ -23,9 +23,9 @@ namespace QLKS_NHOM1.Models
         {
             this.MaKH = Int32.Parse(dataRow["MaKH"].ToString());
             this.HoTen = dataRow["HoTen"].ToString();
-            this.CMND =Int32.Parse(dataRow["CMND"].ToString());
-            this.GioiTinh =dataRow["GioiTinh"].ToString();
-            this.Tuoi =Int32.Parse(dataRow["Tuoi"].ToString());
+            this.CMND = Int32.Parse(dataRow["CMND"].ToString());
+            this.GioiTinh = dataRow["GioiTinh"].ToString();
+            this.Tuoi = Int32.Parse(dataRow["Tuoi"].ToString());
             this.SDT = Int32.Parse(dataRow["SDT"].ToString());
             this.MaPhong = Int32.Parse(dataRow["MaPhong"].ToString());
 
