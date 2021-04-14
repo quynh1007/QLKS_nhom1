@@ -37,20 +37,20 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMaPhong = new System.Windows.Forms.ComboBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtTuoi = new System.Windows.Forms.TextBox();
+            this.lbMaPhong = new System.Windows.Forms.Label();
+            this.lbSDT = new System.Windows.Forms.Label();
+            this.lbTuoi = new System.Windows.Forms.Label();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.lbGioiTinh = new System.Windows.Forms.Label();
+            this.lbCMND = new System.Windows.Forms.Label();
+            this.lbHoTen = new System.Windows.Forms.Label();
             this.btnEmpty = new System.Windows.Forms.Button();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
-            this.lbHoTen = new System.Windows.Forms.Label();
-            this.lbCMND = new System.Windows.Forms.Label();
-            this.lbGioiTinh = new System.Windows.Forms.Label();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtCMND = new System.Windows.Forms.TextBox();
-            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.lbTuoi = new System.Windows.Forms.Label();
-            this.lbSDT = new System.Windows.Forms.Label();
-            this.lbMaPhong = new System.Windows.Forms.Label();
-            this.txtTuoi = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.cbMaPhong = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
@@ -96,6 +96,7 @@
             this.btnRefresh.TabIndex = 6;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnSearch
             // 
@@ -171,6 +172,107 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
             // 
+            // cbMaPhong
+            // 
+            this.cbMaPhong.FormattingEnabled = true;
+            this.cbMaPhong.Location = new System.Drawing.Point(345, 115);
+            this.cbMaPhong.Name = "cbMaPhong";
+            this.cbMaPhong.Size = new System.Drawing.Size(164, 21);
+            this.cbMaPhong.TabIndex = 17;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(345, 71);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(164, 20);
+            this.txtSDT.TabIndex = 16;
+            // 
+            // txtTuoi
+            // 
+            this.txtTuoi.Location = new System.Drawing.Point(345, 33);
+            this.txtTuoi.Name = "txtTuoi";
+            this.txtTuoi.Size = new System.Drawing.Size(164, 20);
+            this.txtTuoi.TabIndex = 15;
+            // 
+            // lbMaPhong
+            // 
+            this.lbMaPhong.AutoSize = true;
+            this.lbMaPhong.Location = new System.Drawing.Point(252, 118);
+            this.lbMaPhong.Name = "lbMaPhong";
+            this.lbMaPhong.Size = new System.Drawing.Size(64, 13);
+            this.lbMaPhong.TabIndex = 14;
+            this.lbMaPhong.Text = "Mã Phòng";
+            // 
+            // lbSDT
+            // 
+            this.lbSDT.AutoSize = true;
+            this.lbSDT.Location = new System.Drawing.Point(252, 74);
+            this.lbSDT.Name = "lbSDT";
+            this.lbSDT.Size = new System.Drawing.Size(88, 13);
+            this.lbSDT.TabIndex = 13;
+            this.lbSDT.Text = "Số Điện Thoại";
+            // 
+            // lbTuoi
+            // 
+            this.lbTuoi.AutoSize = true;
+            this.lbTuoi.Location = new System.Drawing.Point(252, 36);
+            this.lbTuoi.Name = "lbTuoi";
+            this.lbTuoi.Size = new System.Drawing.Size(32, 13);
+            this.lbTuoi.TabIndex = 12;
+            this.lbTuoi.Text = "Tuổi";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbGioiTinh.Location = new System.Drawing.Point(70, 115);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(164, 21);
+            this.cbGioiTinh.TabIndex = 11;
+            // 
+            // txtCMND
+            // 
+            this.txtCMND.Location = new System.Drawing.Point(70, 71);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(164, 20);
+            this.txtCMND.TabIndex = 10;
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Location = new System.Drawing.Point(70, 33);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(164, 20);
+            this.txtHoTen.TabIndex = 9;
+            // 
+            // lbGioiTinh
+            // 
+            this.lbGioiTinh.AutoSize = true;
+            this.lbGioiTinh.Location = new System.Drawing.Point(5, 118);
+            this.lbGioiTinh.Name = "lbGioiTinh";
+            this.lbGioiTinh.Size = new System.Drawing.Size(60, 13);
+            this.lbGioiTinh.TabIndex = 8;
+            this.lbGioiTinh.Text = "Giới Tính";
+            // 
+            // lbCMND
+            // 
+            this.lbCMND.AutoSize = true;
+            this.lbCMND.Location = new System.Drawing.Point(5, 74);
+            this.lbCMND.Name = "lbCMND";
+            this.lbCMND.Size = new System.Drawing.Size(43, 13);
+            this.lbCMND.TabIndex = 7;
+            this.lbCMND.Text = "CMND";
+            // 
+            // lbHoTen
+            // 
+            this.lbHoTen.AutoSize = true;
+            this.lbHoTen.Location = new System.Drawing.Point(5, 36);
+            this.lbHoTen.Name = "lbHoTen";
+            this.lbHoTen.Size = new System.Drawing.Size(49, 13);
+            this.lbHoTen.TabIndex = 6;
+            this.lbHoTen.Text = "Họ Tên";
+            // 
             // btnEmpty
             // 
             this.btnEmpty.Location = new System.Drawing.Point(232, 175);
@@ -180,6 +282,7 @@
             this.btnEmpty.TabIndex = 5;
             this.btnEmpty.Text = "Làm Trống";
             this.btnEmpty.UseVisualStyleBackColor = true;
+            this.btnEmpty.Click += new System.EventHandler(this.btnEmpty_Click);
             // 
             // dgvCustomer
             // 
@@ -193,107 +296,6 @@
             this.dgvCustomer.RowTemplate.Height = 28;
             this.dgvCustomer.Size = new System.Drawing.Size(864, 286);
             this.dgvCustomer.TabIndex = 11;
-            // 
-            // lbHoTen
-            // 
-            this.lbHoTen.AutoSize = true;
-            this.lbHoTen.Location = new System.Drawing.Point(5, 36);
-            this.lbHoTen.Name = "lbHoTen";
-            this.lbHoTen.Size = new System.Drawing.Size(49, 13);
-            this.lbHoTen.TabIndex = 6;
-            this.lbHoTen.Text = "Họ Tên";
-            // 
-            // lbCMND
-            // 
-            this.lbCMND.AutoSize = true;
-            this.lbCMND.Location = new System.Drawing.Point(5, 74);
-            this.lbCMND.Name = "lbCMND";
-            this.lbCMND.Size = new System.Drawing.Size(43, 13);
-            this.lbCMND.TabIndex = 7;
-            this.lbCMND.Text = "CMND";
-            // 
-            // lbGioiTinh
-            // 
-            this.lbGioiTinh.AutoSize = true;
-            this.lbGioiTinh.Location = new System.Drawing.Point(5, 118);
-            this.lbGioiTinh.Name = "lbGioiTinh";
-            this.lbGioiTinh.Size = new System.Drawing.Size(60, 13);
-            this.lbGioiTinh.TabIndex = 8;
-            this.lbGioiTinh.Text = "Giới Tính";
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Location = new System.Drawing.Point(70, 33);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(164, 20);
-            this.txtHoTen.TabIndex = 9;
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.Location = new System.Drawing.Point(70, 71);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(164, 20);
-            this.txtCMND.TabIndex = 10;
-            // 
-            // cbGioiTinh
-            // 
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(70, 115);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(164, 21);
-            this.cbGioiTinh.TabIndex = 11;
-            // 
-            // lbTuoi
-            // 
-            this.lbTuoi.AutoSize = true;
-            this.lbTuoi.Location = new System.Drawing.Point(252, 36);
-            this.lbTuoi.Name = "lbTuoi";
-            this.lbTuoi.Size = new System.Drawing.Size(32, 13);
-            this.lbTuoi.TabIndex = 12;
-            this.lbTuoi.Text = "Tuổi";
-            // 
-            // lbSDT
-            // 
-            this.lbSDT.AutoSize = true;
-            this.lbSDT.Location = new System.Drawing.Point(252, 74);
-            this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(88, 13);
-            this.lbSDT.TabIndex = 13;
-            this.lbSDT.Text = "Số Điện Thoại";
-            // 
-            // lbMaPhong
-            // 
-            this.lbMaPhong.AutoSize = true;
-            this.lbMaPhong.Location = new System.Drawing.Point(252, 118);
-            this.lbMaPhong.Name = "lbMaPhong";
-            this.lbMaPhong.Size = new System.Drawing.Size(64, 13);
-            this.lbMaPhong.TabIndex = 14;
-            this.lbMaPhong.Text = "Mã Phòng";
-            // 
-            // txtTuoi
-            // 
-            this.txtTuoi.Location = new System.Drawing.Point(345, 33);
-            this.txtTuoi.Name = "txtTuoi";
-            this.txtTuoi.Size = new System.Drawing.Size(164, 20);
-            this.txtTuoi.TabIndex = 15;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(345, 71);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(164, 20);
-            this.txtSDT.TabIndex = 16;
-            // 
-            // cbMaPhong
-            // 
-            this.cbMaPhong.FormattingEnabled = true;
-            this.cbMaPhong.Location = new System.Drawing.Point(345, 115);
-            this.cbMaPhong.Name = "cbMaPhong";
-            this.cbMaPhong.Size = new System.Drawing.Size(164, 21);
-            this.cbMaPhong.TabIndex = 17;
             // 
             // fCustomer
             // 
