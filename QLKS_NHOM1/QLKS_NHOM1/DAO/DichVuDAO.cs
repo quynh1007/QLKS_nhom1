@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QLKS_NHOM1.Models;
-using QLKS_NHOM1.DataAccessLayer;
 using System.Data;
+using QLKS_NHOM1.DataAccessLayer;
 
 namespace QLKS_NHOM1.DAO
 {
@@ -31,19 +31,19 @@ namespace QLKS_NHOM1.DAO
         }
         public bool Insert(string TenDichVu, int Gia)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_DICHVU_Insert @TenDichVu, @Gia", new object[] { TenDichVu, Gia });
+            int result = DataProvider.Instance.ExecuteNonQuery("exec SP_DICHVU_Insert @TenDichVu , @Gia", new object[] { TenDichVu, Gia });
             return result > 0;
         }
 
         public bool Update(int MaDichVu, string TenDichVu, int Gia)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_DICHVU_Update @MaDichVu, @TenDichVu, @Gia", new object[] { MaDichVu, TenDichVu, Gia});
+            int result = DataProvider.Instance.ExecuteNonQuery("exec SP_DICHVU_Update @MaDichVu , @TenDichVu , @Gia", new object[] { MaDichVu, TenDichVu, Gia});
             return result > 0;
         }
 
         public bool Delete(int MaDichVu)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_DICHVU_Delete @MaDichVu", new object[] { MaDichVu });
+            int result = DataProvider.Instance.ExecuteNonQuery("exec SP_DICHVU_Delete @MaDichVu", new object[] { MaDichVu });
 
             return result > 0;
         }
@@ -51,7 +51,7 @@ namespace QLKS_NHOM1.DAO
         public List<DichVu> Search(string searchValue)
         {
             List<DichVu> list = new List<DichVu>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SP_DICHVU_Search @searchValue", new object[] { searchValue });
+            DataTable data = DataProvider.Instance.ExecuteQuery("exec SP_DICHVU_Search @searchValue", new object[] { searchValue });
             foreach (DataRow item in data.Rows)
             {
                 DichVu entry = new DichVu(item);

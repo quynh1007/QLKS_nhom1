@@ -11,10 +11,9 @@ namespace QLKS_NHOM1.DataAccessLayer
     class DataProvider
     {
         private static DataProvider instance; // Ctrl + R + E
-
-         // private string connectionString = "Data Source=QUYNH\\SQLEXPRESS;Initial Catalog=QL_KS;Integrated Security=True";
-        //private string connectionString = "Server=DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLTV;User ID=nhom1;pwd=nhom1";
-        private string connectionString = "Data Source=LAPTOP-SCOJ079I;Initial Catalog=QL_KS;Integrated Security=True";
+    
+         private string connectionString = "Data Source=LAPTOP-SCOJ079I;Initial Catalog=QL_KS;Integrated Security=True";
+     
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
@@ -36,7 +35,6 @@ namespace QLKS_NHOM1.DataAccessLayer
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-
                 SqlCommand command = new SqlCommand(query, connection);
 
                 // khi parameter khác null 

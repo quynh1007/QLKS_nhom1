@@ -51,6 +51,12 @@
     <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DataAccessLayer\DataProvider.cs" />
+    <Compile Include="GUI\fDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fDichVu.Designer.cs">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Models\TaiKhoan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\fDichVu.resx">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
