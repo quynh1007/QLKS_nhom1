@@ -29,15 +29,14 @@ namespace QLKS_NHOM1.DAO
             }
             return list;
         }
-        public bool Insert(string TenPhong,string LoaiPhong,int GiaPhong,string ChuThich ,string TinhTrang ,int MaNV ,int MaDichVu)
+        public bool Insert(string TenPhong, string LoaiPhong, int GiaPhong, string ChuThich , string TinhTrang , int MaNV , int MaDichVu)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_PHONG_Insert @TenPhong , @LoaiPhong, @GiaPhong, @ChuThich ,@TinhTrang , @MaNV , @MaDichVu ", new object[] { TenPhong, LoaiPhong, GiaPhong, ChuThich, TinhTrang, MaNV, MaDichVu });
+            int result = DataProvider.Instance.ExecuteNonQuery("SP_PHONG_Insert @TenPhong , @LoaiPhong , @GiaPhong , @ChuThich, @TinhTrang , @MaNV, @MaDichVu", new object[] { TenPhong, LoaiPhong, GiaPhong, ChuThich, TinhTrang, MaNV , MaDichVu });
             return result > 0;
         }
-
-        public bool Update(int MaPhong, string TenPhong, string LoaiPhong, int GiaPhong, string ChuThich, string TinhTrang, int MaNV, int MaDichVu)
+        public bool Update(int MaPhong,string TenPhong, string LoaiPhong, int GiaPhong, string ChuThich, string TinhTrang, int MaNV, int MaDichVu)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_PHONG_Update @MaPhong, @TenPhong, @LoaiPhong, @GiaPhong, @ChuThich , @TinhTrang ,@MaNV , @MaDichVu", new object[] { MaPhong,TenPhong, LoaiPhong, GiaPhong, ChuThich, TinhTrang, MaNV, MaDichVu });
+            int result = DataProvider.Instance.ExecuteNonQuery("SP_Phong_Update @MaPhong,@TenPhong , @LoaiPhong , @GiaPhong , @ChuThich, @TinhTrang , @MaNV, @MaDichVu", new object[] { MaPhong,TenPhong, LoaiPhong, GiaPhong, ChuThich, TinhTrang, MaNV, MaDichVu });
             return result > 0;
         }
 

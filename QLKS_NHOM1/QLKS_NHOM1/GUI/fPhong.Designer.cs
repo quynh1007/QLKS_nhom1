@@ -47,11 +47,11 @@ namespace QLKS_NHOM1.GUI
             this.cbxMaDV = new System.Windows.Forms.ComboBox();
             this.dgvPhong = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,14 +205,15 @@ namespace QLKS_NHOM1.GUI
             this.label1.TabIndex = 17;
             this.label1.Text = "Phòng";
             // 
-            // button1
+            // btnThem
             // 
-            this.button1.Location = new System.Drawing.Point(750, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(750, 43);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 18;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // button2
             // 
@@ -222,6 +223,7 @@ namespace QLKS_NHOM1.GUI
             this.button2.TabIndex = 19;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // button3
             // 
@@ -231,6 +233,7 @@ namespace QLKS_NHOM1.GUI
             this.button3.TabIndex = 20;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button4
             // 
@@ -240,24 +243,25 @@ namespace QLKS_NHOM1.GUI
             this.button4.TabIndex = 21;
             this.button4.Text = "Tìm kiếm";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox6
+            // txtSearch
             // 
-            this.textBox6.Location = new System.Drawing.Point(750, 153);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(115, 22);
-            this.textBox6.TabIndex = 22;
+            this.txtSearch.Location = new System.Drawing.Point(750, 153);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(115, 22);
+            this.txtSearch.TabIndex = 22;
             // 
             // fPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 559);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPhong);
             this.Controls.Add(this.cbxMaDV);
@@ -305,10 +309,10 @@ namespace QLKS_NHOM1.GUI
         private System.Windows.Forms.ComboBox cbxMaDV;
         private System.Windows.Forms.DataGridView dgvPhong;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }

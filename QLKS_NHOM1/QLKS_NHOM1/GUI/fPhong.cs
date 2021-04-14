@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLKS_NHOM1.DAO;
+using QLKS_NHOM1.Models;
 
 namespace QLKS_NHOM1.GUI
 {
@@ -48,6 +49,9 @@ namespace QLKS_NHOM1.GUI
         {
             cbxMaNV.DataSource = NhanVienDAO.Instance.GetAll();
             cbxMaNV.DisplayMember = "MaNV";
+
+            cbxMaDV.DataSource = DichVuDAO.Instance.GetAll();
+            cbxMaDV.DisplayMember = "MaDichVu";
         }
 
 
@@ -68,7 +72,7 @@ namespace QLKS_NHOM1.GUI
             string LoaiPhong = txtLoaiPhong.Text;
             string ChuThich = txtChuThich.Text;
             string TinhTrang = txtTinhTrang.Text;
-            int GiaPhong;
+            int GiaPhong ;
             Int32.TryParse(txtGia.Text, out GiaPhong);
             int MaNV;
             Int32.TryParse(cbxMaNV.Text, out MaNV);
@@ -93,7 +97,69 @@ namespace QLKS_NHOM1.GUI
                 LoadListPhong();
             }
         }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string TenPhong = txtTenPhong.Text;
+            string LoaiPhong = txtLoaiPhong.Text;
+            string ChuThich = txtChuThich.Text;
+            string TinhTrang = txtTinhTrang.Text;
+            int GiaPhong;
+            Int32.TryParse(txtGia.Text, out GiaPhong);
+            int MaPhong;
+            Int32.TryParse(txtMaPhong.Text, out MaPhong);
+            int MaNV;
+            Int32.TryParse(cbxMaNV.Text, out MaNV);
+            int MaDichVu;
+            Int32.TryParse(cbxMaDV.Text, out MaDichVu);
+            try
+            {
+                if (TenPhong == "" || LoaiPhong == "" || ChuThich == "" || TinhTrang == "")
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    return;
+                }
+                
+                PhongDAO.Instance.Update(MaPhong, TenPhong, LoaiPhong, GiaPhong, ChuThich, TinhTrang, MaNV, MaDichVu);
+                MessageBox.Show("Sửa thành công");
+                LoadListPhong();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListPhong();
+            }
+        }
+        
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int MaPhong=0;
+            Int32.TryParse(txtMaPhong.Text.Trim(), out MaPhong);
+            try
+            {
+                PhongDAO.Instance.Delete(MaPhong);
+                MessageBox.Show("Xóa thành công");
+                LoadListPhong();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListPhong();
+            }
+        }
+
+     
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string str = txtSearch.Text.Trim();
+            if (str == "")
+            {
+                MessageBox.Show("Chưa nhập thông tin tìm kiếm");
+                return;
+            }
+            PhongList.DataSource = PhongDAO.Instance.Search(str);
+        }
 
     }
 }
