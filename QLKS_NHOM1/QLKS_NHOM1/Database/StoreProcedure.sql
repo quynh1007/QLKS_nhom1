@@ -80,3 +80,74 @@ BEGIN
     OR MaDichVu LIKE N'%' + @searchValue + '%'
 END
 GO
+
+---nhan vien
+
+CREATE PROCEDURE SP_NHANVIEN_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM NHANVIEN
+END
+GO
+
+--- dich vu
+
+CREATE PROCEDURE SP_DICHVU_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM DICHVU
+END
+GO
+
+CREATE PROCEDURE SP_DICHVU_Insert
+  @TenDichVu NVARCHAR(50),
+  @Gia int
+ 
+AS
+BEGIN
+  INSERT INTO DICHVU
+    (TenDichVu, Gia)
+  VALUES(@TenDichVu, @Gia)
+END
+GO
+
+CREATE PROCEDURE SP_DICHVU_Delete
+  @MaDichVu INT
+AS
+BEGIN
+  UPDATE PHONG
+  SET MaDichVu = NULL
+  WHERE MaDichVu = @MaDichVu
+
+  DELETE DICHVU
+  WHERE MaDichVu = @MaDichVu
+END
+GO
+
+CREATE PROCEDURE SP_DICHVU_Update
+  @MaDichVu int ,
+  @TenDichVu NVARCHAR(50),
+  @Gia int
+AS
+BEGIN
+  UPDATE DICHVU
+  SET TenDichVu = @TenDichVu,
+  Gia = @Gia
+
+  WHERE MaDichVu = @MaDichVu
+END
+GO
+
+CREATE PROCEDURE SP_DICHVU_Search
+  @searchValue NVARCHAR(200)
+AS
+BEGIN
+  SELECT *
+  FROM DICHVU
+  WHERE MaDichVu LIKE N'%' + @searchValue + '%'
+    OR TenDichVu LIKE N'%' + @searchValue + '%'
+    OR Gia LIKE N'%' + @searchValue + '%'
+END
+GO
