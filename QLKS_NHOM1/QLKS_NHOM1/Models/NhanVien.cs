@@ -23,7 +23,7 @@ namespace QLKS_NHOM1.Models
             this.MaNV = Int32.Parse(dataRow["MaNV"].ToString());
             this.HoTen = dataRow["HoTen"].ToString();
             this.SDT = Int32.Parse(dataRow["SDT"].ToString());
-            this.NgaySinh = DateTime.Parse(dataRow["Ngáyinh"].ToString());
+            this.NgaySinh = DateTime.Parse(dataRow["NgaySinh"].ToString());
             this.DiaChi = dataRow["DiaChi"].ToString();
             this.GioiTinh = dataRow["GioiTinh"].ToString();
             this.ChucVu = dataRow["ChucVu"].ToString();

@@ -1,0 +1,1 @@
+SP_PHONG_Insert 'phong1','A',100,'a','a','1','1'

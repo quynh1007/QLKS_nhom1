@@ -62,8 +62,38 @@ namespace QLKS_NHOM1.GUI
         {
             PhongList.DataSource = PhongDAO.Instance.GetAll();
         }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string TenPhong = txtTenPhong.Text;
+            string LoaiPhong = txtLoaiPhong.Text;
+            string ChuThich = txtChuThich.Text;
+            string TinhTrang = txtTinhTrang.Text;
+            int GiaPhong;
+            Int32.TryParse(txtGia.Text, out GiaPhong);
+            int MaNV;
+            Int32.TryParse(cbxMaNV.Text, out MaNV);
+            int MaDichVu;
+            Int32.TryParse(cbxMaDV.Text, out MaDichVu);
 
-  
+
+            try
+            {
+                if (TenPhong == "" || LoaiPhong == ""|| ChuThich == "" || TinhTrang == "")
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    return;
+                }
+                PhongDAO.Instance.Insert(TenPhong, LoaiPhong, GiaPhong, ChuThich, TinhTrang, MaNV, MaDichVu);
+                MessageBox.Show("Thêm thành công");
+                LoadListPhong();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListPhong();
+            }
+        }
+
 
     }
 }
