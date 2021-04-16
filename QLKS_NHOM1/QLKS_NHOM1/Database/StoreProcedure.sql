@@ -1,5 +1,5 @@
 ﻿USE QL_KS
-
+GO
 -----------------------Thiệp Khách Hàng------------------------
 CREATE PROCEDURE SP_KHACHHANG_GetAll
 AS
@@ -12,7 +12,7 @@ GO
 CREATE PROCEDURE SP_KHACHHANG_Insert
   @HoTen NVARCHAR(50),
   @CMND INT,
-  @GioiTinh NVARCHAR(3),
+  @GioiTinh NVARCHAR(5),
   @Tuoi INT,
   @SDT INT,
   @MaPhong INT
@@ -34,13 +34,13 @@ END
 GO
 
 CREATE PROCEDURE SP_KHACHHANG_Update
-  @MaKH INT,
-  @HoTen NVARCHAR(50),
-  @CMND INT,
-  @GioiTinh NVARCHAR(3),
-  @Tuoi INT,
-  @SDT INT,
-  @MaPhong INT
+	@MaKH INT,
+	@HoTen NVARCHAR(50),
+	@CMND INT,
+	@GioiTinh NVARCHAR(5),
+	@Tuoi INT,
+	@SDT INT,
+	@MaPhong INT
 AS
 BEGIN
   UPDATE KHACHHANG

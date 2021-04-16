@@ -24,8 +24,9 @@ namespace QLKS_NHOM1.Models
             this.MaPhong = Int32.Parse(dataRow["MaPhong"].ToString());
             this.TenPhong = dataRow["TenPhong"].ToString();
             this.LoaiPhong = dataRow["LoaiPhong"].ToString();
-            this.GiaPhong = Int32.Parse(dataRow["GiạPhong"].ToString());
+            this.GiaPhong = Int32.Parse(dataRow["GiaPhong"].ToString());
             this.ChuThich = dataRow["ChuThich"].ToString();
+            this.TinhTrang = dataRow["TinhTrang"].ToString();
             this.MaNV = Int32.Parse(dataRow["MaNV"].ToString());
             this.MaDichVu = Int32.Parse(dataRow["MaDichVu"].ToString());
         }

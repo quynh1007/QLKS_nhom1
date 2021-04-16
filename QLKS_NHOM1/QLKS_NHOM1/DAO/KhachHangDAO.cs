@@ -45,13 +45,13 @@ namespace QLKS_NHOM1.DAO
 
         public bool Insert(string HoTen, int CMND, string GioiTinh, int Tuoi, int SDT, int MaPhong)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_KHACHHANG_Insert @HoTen, @CMND, @GioiTinh, @Tuoi, @SDT, @MaPhong", new object[] { HoTen, CMND, GioiTinh, Tuoi, SDT, MaPhong });
+            int result = DataProvider.Instance.ExecuteNonQuery("SP_KHACHHANG_Insert @HoTen , @CMND , @GioiTinh , @Tuoi , @SDT , @MaPhong", new object[] { HoTen, CMND, GioiTinh, Tuoi, SDT, MaPhong });
             return result > 0;
         }
 
         public bool Update(int MaKH, string HoTen, int CMND, string GioiTinh, int Tuoi, int SDT, int MaPhong)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_KHACHHANG_Update @MaKH, @HoTen, @CMND, @GioiTinh, @Tuoi, @SDT, @MaPhong", new object[] { MaKH, HoTen, CMND, GioiTinh, Tuoi, SDT, MaPhong });
+            int result = DataProvider.Instance.ExecuteNonQuery("SP_KHACHHANG_Update @MaKH , @HoTen , @CMND , @GioiTinh , @Tuoi , @SDT , @MaPhong", new object[] { MaKH, HoTen, CMND, GioiTinh, Tuoi, SDT, MaPhong });
 
             return result > 0;
         }

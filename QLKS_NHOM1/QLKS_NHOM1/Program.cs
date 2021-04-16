@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLKS_NHOM1.GUI;
 
-
 namespace QLKS_NHOM1
 {
     static class Program

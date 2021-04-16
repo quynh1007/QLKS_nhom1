@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using QLKS_NHOM1.DataAccessLayer;
 using QLKS_NHOM1.Models;
-
+using System.Data;
 namespace QLKS_NHOM1.DAO
 {
     class PhongDAO
@@ -21,7 +20,7 @@ namespace QLKS_NHOM1.DAO
         public List<Phong> GetAll()
         {
             List<Phong> list = new List<Phong>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SP_Phong_GetAll");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SP_PHONG_GetAll");
 
             foreach (DataRow item in data.Rows)
             {
